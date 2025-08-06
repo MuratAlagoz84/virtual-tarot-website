@@ -1,22 +1,114 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+// src/layouts/Layout.astro
+export interface Props {
+    title: string;
+}
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Virtual Tarot uygulaması ile Tarot kartlarının gizemli dünyasını keşfedin. Android ve iOS'te ücretsiz indirin.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Google Analytics Tag'ini buraya ekleyeceksiniz -->
+    
+    <!-- Tüm site için geçerli olan global stiller -->
+    <style is:global>
+        /* --- Global Variables for Consistency --- */
+        /* :root seçicisi, değişkenlerin tüm dokümanda kullanılabilmesini sağlar. */
+        /* `is:global` attribute'u, bu style bloğunun kapsüllenmemesini ve tüm siteye uygulanmasını sağlar. */
+        :root {
+            --primary-color: #4a148c; /* Deep Purple, mystical */
+            --secondary-color: #7b1fa2; /* Lighter Purple */
+            --text-color: #333;
+            --light-bg-color: #f7f4ff;
+            --white-color: #ffffff;
+            --max-width: 1200px;
+        }
+
+        /* --- Genel Sayfa Stilleri --- */
+        body {
+            margin: 0;
+            font-family: sans-serif; /* Sitenin genel font ailesi */
+            background-color: var(--white-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- Header Stilleri --- */
+        header {
+            background: var(--white-color);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Footer Stilleri --- */
+        footer {
+            background: var(--text-color);
+            color: var(--light-bg-color);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem; /* Footer'dan önce biraz boşluk bırakır */
+        }
+        footer a {
+            color: var(--light-bg-color);
+            margin: 0 0.5rem;
+            text-decoration: none;
+            transition: opacity 0.2s ease-in-out;
+        }
+        footer a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Virtual Tarot</a>
+            <nav>
+                <a href="/ozellikler">Özellikler</a>
+                <a href="/kart-anlamlari">Kart Anlamları</a>
+                <a href="/blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <slot /> <!-- Sayfanın içeriği buraya gelecek -->
+    </main>
+    <footer>
+        <p>&copy; {new Date().getFullYear()} Virtual Tarot. Tüm hakları saklıdır.</p>
+        <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
+    </footer>
+</body>
+</html>
