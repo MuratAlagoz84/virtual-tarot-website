@@ -3,9 +3,9 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://virtualtarotapp.com',
-  
-  // Bu ayarı da eklemeyi düşünün
-  trailingSlash: true, // Tüm URL'lerin sonunda / olmasını sağlar (örn: /tr/)
+
+
+  trailingSlash: true,
 
   i18n: {
     defaultLocale: 'en',
