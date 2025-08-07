@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   // Vercel için optimizasyon
-  output: 'server',
   
   // i18n (Uluslararasılaştırma) Yapılandırması
   i18n: {
