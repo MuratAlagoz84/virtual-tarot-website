@@ -54,6 +54,74 @@ const t = translations.en; // Sadece İngilizce çevirileri kullan
       </div>
     </section>
 
+
+    <!-- ========== APP SCREENSHOTS SECTION ========== -->
+<section class="app-screenshots">
+  <div class="container">
+    <h2>Explore the Mystical World Within</h2>
+    <p>Take a tour of Virtual Tarot's intuitive and beautifully designed interface.</p>
+    
+    <div class="screenshots-grid">
+      <!-- 1. Ana Menü Ekranı -->
+      <div class="screenshot-card">
+        <img src="/images/screenshots/mockup-main-menu.png" alt="Virtual Tarot main menu screen showing card selection for a reading" loading="lazy" />
+        <div class="screenshot-caption">
+          <h4>Main Dashboard</h4>
+          <p>Begin your journey with a clean and easy-to-navigate main screen.</p>
+        </div>
+      </div>
+      
+      <!-- 2. Kart Seçimi Ekranı -->
+      <div class="screenshot-card">
+        <img src="/images/screenshots/mockup-card-selection.png" alt="Screen for selecting a tarot card from a beautifully animated deck" loading="lazy" />
+        <div class="screenshot-caption">
+          <h4>Card Selection</h4>
+          <p>Choose your cards from a stunning, interactive deck with a simple tap.</p>
+        </div>
+      </div>
+
+      <!-- 3. Açılım Sonrası Ekranı -->
+      <div class="screenshot-card">
+        <img src="/images/screenshots/mockup-reading-result.png" alt="Result screen showing the selected tarot cards in their final spread" loading="lazy" />
+        <div class="screenshot-caption">
+          <h4>Your Reading Unveiled</h4>
+          <p>View your chosen cards laid out in the spread you selected.</p>
+        </div>
+      </div>
+
+      <!-- 4. Kart Detayı Ekranı -->
+      <div class="screenshot-card">
+        <img src="/images/screenshots/mockup-card-detail.png" alt="Detailed view of a single tarot card with its upright and reversed meanings" loading="lazy" />
+        <div class="screenshot-caption">
+          <h4>Deep Dive into Meanings</h4>
+          <p>Explore the rich symbolism and detailed interpretations of each card.</p>
+        </div>
+      </div>
+
+      <!-- 5. Yorumlama Ekranı -->
+      <div class="screenshot-card">
+        <img src="/images/screenshots/mockup-interpretation.png" alt="Screen showing a detailed, personalized interpretation of the full tarot reading" loading="lazy" />
+        <div class="screenshot-caption">
+          <h4>Personalized Interpretation</h4>
+          <p>Receive insightful and easy-to-understand interpretations tailored to your question.</p>
+        </div>
+      </div>
+
+      <!-- 6. Rehber Kitabı Ekranı -->
+      <div class="screenshot-card">
+        <img src="/images/screenshots/mockup-guide-book.png" alt="The in-app guide book or library with all 78 tarot cards" loading="lazy" />
+        <div class="screenshot-caption">
+          <h4>Your Tarot Guidebook</h4>
+          <p>Access a complete library of all 78 cards anytime, right at your fingertips.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
     <!-- ========== 3. SOCIAL PROOF SECTION ========== -->
     <section class="social-proof">
       <div class="container">
@@ -122,4 +190,73 @@ const t = translations.en; // Sadece İngilizce çevirileri kullan
   .final-cta h2, .final-cta p { color: var(--white-color); }
   .cta-button.primary { display: inline-block; background-color: var(--white-color); color: var(--primary-color); padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1.5rem; transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
   .cta-button.primary:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+  /* --- App Screenshots Section --- */
+.app-screenshots {
+  padding: 5rem 1rem;
+  background-color: var(--light-bg-color); /* Hafif bir arka plan rengi */
+  text-align: center;
+}
+
+.app-screenshots h2 {
+  color: var(--primary-color);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.app-screenshots p {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.screenshots-grid {
+  display: grid;
+  /* Responsive grid: Mobilde 1, tablette 2, büyük ekranlarda 3 sütun */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem; /* Kartlar arasındaki boşluk */
+  align-items: start; /* Kartları üste hizala */
+}
+
+.screenshot-card {
+  background: var(--white-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Resim köşelerinin taşmasını engelle */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Yumuşak bir hover animasyonu */
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshot-card:hover {
+  transform: translateY(-12px) scale(1.02); /* Üzerine gelince yukarı kalksın ve büyüsün */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid var(--light-bg-color); /* Resim ile alttaki metin arasına ince bir çizgi */
+}
+
+.screenshot-caption {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.screenshot-caption h4 {
+  color: var(--primary-color);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.screenshot-caption p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 </style>
