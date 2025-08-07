@@ -3,29 +3,23 @@ import type { APIRoute } from "astro";
 
 const languages = ['en', 'tr', 'es']; // Kullandığınız diller
 
-// Dinamik olarak URL'leri oluşturmak için fonksiyon
-function generateUrls(siteUrl: string, langs: string[]) {
-  const urls = [siteUrl]; // Ana sayfa
-
-  langs.forEach(lang => {
-    // siteUrl zaten https://www.virtualtarotapp.com şeklinde sonunda / içeriyor olmalı
-    // Burada her dile özel URL'yi oluştururken doğrudan /lang/ ekliyoruz
-    urls.push(`${siteUrl}/${lang}/`);
-  });
-
-  return urls;
-}
-
 export const GET: APIRoute = async ({ site }) => {
-  if (!site) {
-    console.error("Site URL'si tanımlı değil. astro.config.mjs dosyasındaki site alanını kontrol edin.");
-    return new Response("Site URL'si eksik", { status: 500 });
+  // site değerini kontrol edin ve string'e çevirin
+  const siteUrl = typeof site === 'string' ? site : '';
+
+  if (!siteUrl) {
+    console.error("Site URL'si tanımlı değil veya geçersiz. astro.config.mjs dosyasındaki site alanını kontrol edin.");
+    return new Response("Site URL'si eksik veya geçersiz", { status: 500 });
   }
 
-  // siteUrl'nin sonunda / olduğundan emin olun
-  const normalizedSiteUrl = site.endsWith('/') ? site.slice(0, -1) : site;
+  // siteUrl'nin sonunda / olmadığından emin olun
+  const normalizedSiteUrl = siteUrl.endsWith('/') ? siteUrl.slice(0, -1) : siteUrl;
 
-  const urls = generateUrls(normalizedSiteUrl, languages);
+  const urls = [normalizedSiteUrl + '/']; // Ana sayfa
+
+  languages.forEach(lang => {
+    urls.push(`${normalizedSiteUrl}/${lang}/`);
+  });
 
   // Düzgün biçimlendirilmiş XML site haritası
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
