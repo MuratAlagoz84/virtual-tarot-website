@@ -1,31 +1,31 @@
 ---
 // src/pages/index.astro
-import Layout from '../layouts/Layout.astro'; // Tüm sayfayı saran ana şablonumuzu import ediyoruz.
----
+import Layout from '../layouts/Layout.astro';
+import { translations } from '../i18n/ui';
 
-<Layout title="Virtual Tarot - Geleceğinize Işık Tutun">
+const t = translations.en; // Sadece İngilizce çevirileri kullan
+---
+<Layout title="Virtual Tarot - Illuminate Your Future" lang="en">
   <main>
     <!-- ========== 1. HERO SECTION ========== -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1>Geleceğinize Işık Tutun</h1>
+          <h1>{t.hero.title}</h1>
           <p class="hero-subtitle">
-            Virtual Tarot ile gizemli Tarot kartlarının rehberliğinde içsel yolculuğunuza çıkın. 
-            Anında falınızı baktırın, kartların anlamlarını keşfedin.
+            {t.hero.subtitle}
           </p>
           <div class="cta-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.muratalagoz.tarot12&hl=tr" target="_blank" rel="noopener noreferrer" class="cta-button google-play" aria-label="Google Play'den İndirin">
-              <img src="/images/google-play-badge.svg" alt="Google Play'den İndirin" />
+            <a href="https://play.google.com/store/apps/details?id=com.muratalagoz.tarot12&hl=tr" target="_blank" rel="noopener noreferrer" class="cta-button google-play" aria-label="Get it on Google Play">
+              <img src="/images/google-play-badge.svg" alt="Get it on Google Play" />
             </a>
-            <a href="https://apps.apple.com/cy/app/virtual-tarot-tarot-kartlar%C4%B1/id1511281117?l=tr&platform=iphone" target="_blank" rel="noopener noreferrer" class="cta-button app-store" aria-label="App Store'dan İndirin">
-              <img src="/images/app-store-badge.svg" alt="App Store'dan İndirin" />
+            <a href="https://apps.apple.com/cy/app/virtual-tarot-tarot-kartlar%C4%B1/id1511281117?l=tr&platform=iphone" target="_blank" rel="noopener noreferrer" class="cta-button app-store" aria-label="Download on the App Store">
+              <img src="/images/app-store-badge.svg" alt="Download on the App Store" />
             </a>
           </div>
         </div>
         <div class="hero-image">
-          <!-- Buraya uygulamanızın ekran görüntüsünün olduğu bir telefon mockup görseli gelecek -->
-          <img src="/images/phone-mockup.png" alt="Virtual Tarot Uygulama Ekran Görüntüsü" width="300" height="600" />
+          <img src="/images/phone-mockup.png" alt="Virtual Tarot App Screenshot" width="300" height="600" />
         </div>
       </div>
     </section>
@@ -33,22 +33,22 @@ import Layout from '../layouts/Layout.astro'; // Tüm sayfayı saran ana şablon
     <!-- ========== 2. FEATURES SECTION ========== -->
     <section id="features" class="features">
       <div class="container">
-        <h2>Neden Virtual Tarot?</h2>
+        <h2>{t.features.title}</h2>
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon" aria-hidden="true">🔮</div>
-            <h3>Çeşitli Kart Açılımları</h3>
-            <p>Günlük kart, tek kart aşk falı, Kelt haçı ve daha birçok farklı açılım ile sorularınıza net cevaplar bulun.</p>
+            <h3>{t.features.cardLayoutsTitle}</h3>
+            <p>{t.features.cardLayoutsDesc}</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon" aria-hidden="true">📚</div>
-            <h3>Detaylı Kart Kütüphanesi</h3>
-            <p>78 Major ve Minor Arcana kartının tüm anlamları, tarihçeleri ve yorumları elinizin altında.</p>
+            <h3>{t.features.libraryTitle}</h3>
+            <p>{t.features.libraryDesc}</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon" aria-hidden="true">✨</div>
-            <h3>Kişiselleştirilmiş Deneyim</h3>
-            <p>Kendi günlük tutun, çektiğiniz kartları kaydedin ve zaman içindeki gelişiminizi takip edin.</p>
+            <h3>{t.features.personalizedTitle}</h3>
+            <p>{t.features.personalizedDesc}</p>
           </div>
         </div>
       </div>
@@ -57,27 +57,27 @@ import Layout from '../layouts/Layout.astro'; // Tüm sayfayı saran ana şablon
     <!-- ========== 3. SOCIAL PROOF SECTION ========== -->
     <section class="social-proof">
       <div class="container">
-        <h2>Kullanıcılarımız Ne Diyor?</h2>
+        <h2>{t.socialProof.title}</h2>
         <div class="reviews-grid">
           <div class="review-card">
-            <div class="stars" aria-label="5 yıldız">⭐⭐⭐⭐⭐</div>
-            <p>"Harika bir uygulama! Anlaşılır ve gerçekten etkili. Her gün kullanıyorum."</p>
-            <p class="reviewer">- Ayşe K.</p>
+            <div class="stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+            <p>"Amazing app! Very intuitive and powerful. I use it every day."</p>
+            <p class="reviewer">- Sarah J.</p>
           </div>
           <div class="review-card">
-            <div class="stars" aria-label="5 yıldız">⭐⭐⭐⭐⭐</div>
-            <p>"Kart anlamları çok detaylı. Arayüzü de çok şık. Kesinlikle tavsiye ederim."</p>
-            <p class="reviewer">- Murat B.</p>
+            <div class="stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+            <p>"The card meanings are so detailed. The interface is also very sleek. Highly recommend."</p>
+            <p class="reviewer">- David L.</p>
           </div>
           <div class="review-card">
-            <div class="stars" aria-label="5 yıldız">⭐⭐⭐⭐⭐</div>
-            <p>"Falcıya gitmeye gerek kalmadı. Kendi kendime fal bakmak çok daha keyifli."</p>
-            <p class="reviewer">- Zeynep A.</p>
+            <div class="stars" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+            <p>"No need to go to a fortune teller. Doing my own readings is much more fun."</p>
+            <p class="reviewer">- Emily R.</p>
           </div>
         </div>
         <div class="app-ratings">
-            <img src="/images/google-play-rating.png" alt="Google Play Puanı" width="150" height="50" />
-            <img src="/images/app-store-rating.png" alt="App Store Puanı" width="150" height="50" />
+            <img src="/images/google-play-rating.png" alt="Rating on Google Play" width="150" height="50" />
+            <img src="/images/app-store-rating.png" alt="Rating on the App Store" width="150" height="50" />
         </div>
       </div>
     </section>
@@ -85,173 +85,41 @@ import Layout from '../layouts/Layout.astro'; // Tüm sayfayı saran ana şablon
     <!-- ========== 4. FINAL CTA SECTION ========== -->
     <section class="final-cta">
       <div class="container">
-        <h2>Hemen Keşfedin, İçgörülerinizi Kazanın</h2>
-        <p>Binlerce kullanıcı gibi siz de geleceğinize ışık tutun.</p>
-        <a href="#features" class="cta-button primary">Daha Fazla Öğren</a> 
+        <h2>{t.finalCta.title}</h2>
+        <p>{t.finalCta.subtitle}</p>
+        <a href="#features" class="cta-button primary">{t.finalCta.button}</a>
       </div>
     </section>
   </main>
 </Layout>
 
 <style>
-  /* --- Global Variables for Consistency --- */
-  :root {
-    --primary-color: #4a148c;
-    --secondary-color: #7b1fa2;
-    --text-color: #333;
-    --light-bg-color: #f7f4ff;
-    --white-color: #ffffff;
-    --max-width: 1200px;
-  }
-
-  /* --- General Styles --- */
-  .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-
-  h1, h2, h3 {
-    color: var(--primary-color);
-    font-family: sans-serif;
-    margin-top: 0; /* Varsayılan margin'leri sıfırla */
-  }
-
-  h1 { font-size: clamp(2rem, 5vw, 3.5rem); } /* Responsive font size */
+  /* ... Önceki stillerinizi aynen buraya yapıştırın ... */
+  /* Değişen bir şey yok, stiller sayfaya özel kalıyor */
+  .container { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1rem; }
+  h1, h2, h3 { color: var(--primary-color); font-family: sans-serif; margin-top: 0; }
+  h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
   h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); text-align: center; margin-bottom: 2rem; }
   h3 { font-size: 1.5rem; }
   p { line-height: 1.6; color: var(--text-color); }
-
-  /* --- Hero Section --- */
-  .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white-color);
-    padding: 4rem 1rem;
-    text-align: center;
-  }
-
-  .hero .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .hero-content h1 {
-    color: var(--white-color);
-    margin-bottom: 1rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-    max-width: 600px;
-    color: var(--white-color);
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap; /* Mobilde alt alta sıralanır */
-  }
-
-  .cta-button img {
-    height: 60px;
-    transition: transform 0.2s ease-in-out;
-  }
-  .cta-button:hover img {
-    transform: scale(1.05);
-  }
-
-  /* --- Features Section --- */
-  .features {
-    background-color: var(--light-bg-color);
-    padding: 4rem 1rem;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .feature-card {
-    background: var(--white-color);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  /* --- Social Proof Section --- */
-  .social-proof {
-    padding: 4rem 1rem;
-  }
-
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .review-card {
-    background: var(--light-bg-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 5px solid var(--secondary-color);
-  }
-
-  .reviewer {
-    font-weight: bold;
-    margin-top: 1rem;
-    text-align: right;
-  }
-
-  .app-ratings {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-  }
-
-  /* --- Final CTA Section --- */
-  .final-cta {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  .final-cta h2, .final-cta p {
-    color: var(--white-color);
-  }
-
-  .cta-button.primary {
-    display: inline-block;
-    background-color: var(--white-color);
-    color: var(--primary-color);
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1.5rem;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-
-  .cta-button.primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  }
+  .hero { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white-color); padding: 4rem 1rem; text-align: center; }
+  .hero .container { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
+  .hero-content h1 { color: var(--white-color); margin-bottom: 1rem; }
+  .hero-subtitle { font-size: 1.2rem; max-width: 600px; color: var(--white-color); }
+  .cta-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; justify-content: center; flex-wrap: wrap; }
+  .cta-button img { height: 60px; transition: transform 0.2s ease-in-out; }
+  .cta-button:hover img { transform: scale(1.05); }
+  .features { background-color: var(--light-bg-color); padding: 4rem 1rem; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center; }
+  .feature-card { background: var(--white-color); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .social-proof { padding: 4rem 1rem; }
+  .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+  .review-card { background: var(--light-bg-color); padding: 1.5rem; border-radius: 8px; border-left: 5px solid var(--secondary-color); }
+  .reviewer { font-weight: bold; margin-top: 1rem; text-align: right; }
+  .app-ratings { display: flex; justify-content: center; align-items: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+  .final-cta { background-color: var(--primary-color); color: var(--white-color); padding: 3rem 1rem; text-align: center; }
+  .final-cta h2, .final-cta p { color: var(--white-color); }
+  .cta-button.primary { display: inline-block; background-color: var(--white-color); color: var(--primary-color); padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1.5rem; transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
+  .cta-button.primary:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 </style>

@@ -1,105 +1,51 @@
 ---
 // src/layouts/Layout.astro
+import { translations } from '../i18n/ui'; // Çevirileri import et
+import type { UIStrings } from '../i18n/ui'; // Tip tanımını import et
+
 export interface Props {
     title: string;
+    description?: string;
+    lang: string; // Hangi dilde olduğunu söyleyen prop
 }
 
-const { title } = Astro.props;
+const { title, description, lang } = Astro.props;
+
+// Mevcut dil için çevirileri al
+const t = translations[lang] || translations.en; // Eğer dil bulunamazsa İngilizce'ye fallback yap
+
+// hreflang için linkleri oluştur
+const alternateLinks = Object.keys(translations).map(locale => ({
+  lang: locale,
+  url: locale === 'en' ? '/' : `/${locale}/`
+}));
+
+const metaDescription = description || "Illuminate your future with Virtual Tarot. Explore the mysteries of Tarot cards. Download for free on Android and iOS.";
 ---
 <!DOCTYPE html>
-<html lang="tr">
+<html lang={lang}>
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Virtual Tarot uygulaması ile Tarot kartlarının gizemli dünyasını keşfedin. Android ve iOS'te ücretsiz indirin.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content={metaDescription} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <!-- Google Analytics Tag'ini buraya ekleyeceksiniz -->
-    
-    <!-- Tüm site için geçerli olan global stiller -->
-    <style is:global>
-        /* --- Global Variables for Consistency --- */
-        /* :root seçicisi, değişkenlerin tüm dokümanda kullanılabilmesini sağlar. */
-        /* `is:global` attribute'u, bu style bloğunun kapsüllenmemesini ve tüm siteye uygulanmasını sağlar. */
-        :root {
-            --primary-color: #4a148c; /* Deep Purple, mystical */
-            --secondary-color: #7b1fa2; /* Lighter Purple */
-            --text-color: #333;
-            --light-bg-color: #f7f4ff;
-            --white-color: #ffffff;
-            --max-width: 1200px;
-        }
 
-        /* --- Genel Sayfa Stilleri --- */
-        body {
-            margin: 0;
-            font-family: sans-serif; /* Sitenin genel font ailesi */
-            background-color: var(--white-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* --- Header Stilleri --- */
-        header {
-            background: var(--white-color);
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .header-content {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 500;
-            transition: color 0.2s ease-in-out;
-        }
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        /* --- Footer Stilleri --- */
-        footer {
-            background: var(--text-color);
-            color: var(--light-bg-color);
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem; /* Footer'dan önce biraz boşluk bırakır */
-        }
-        footer a {
-            color: var(--light-bg-color);
-            margin: 0 0.5rem;
-            text-decoration: none;
-            transition: opacity 0.2s ease-in-out;
-        }
-        footer a:hover {
-            opacity: 0.8;
-        }
-    </style>
+    <!-- HREFLANG ETİKETLERİ -->
+    <link rel="alternate" hreflang="x-default" href="https://virtualtarotapp.com" />
+    {alternateLinks.map(link => (
+        <link rel="alternate" hreflang={link.lang} href={`https://virtualtarotapp.com${link.url}`} />
+    ))}
 </head>
 <body>
     <header>
         <div class="header-content">
             <a href="/" class="logo">Virtual Tarot</a>
             <nav>
-                <a href="/ozellikler">Özellikler</a>
-                <a href="/kart-anlamlari">Kart Anlamları</a>
-                <a href="/blog">Blog</a>
+                <a href={`/${lang}/features`}>{t.nav.features}</a>
+                <a href={`/${lang}/cards`}>{t.nav.cardMeanings}</a>
+                <a href={`/${lang}/blog`}>{t.nav.blog}</a>
             </nav>
         </div>
     </header>
@@ -107,8 +53,75 @@ const { title } = Astro.props;
         <slot /> <!-- Sayfanın içeriği buraya gelecek -->
     </main>
     <footer>
-        <p>&copy; {new Date().getFullYear()} Virtual Tarot. Tüm hakları saklıdır.</p>
-        <a href="/gizlilik-politikasi">Gizlilik Politikası</a>
+        <p>{t.footer.copyright}</p>
+        <a href={`/${lang}/privacy-policy`}>{t.footer.privacyPolicy}</a>
     </footer>
 </body>
 </html>
+
+<style is:global>
+    /* ... Önceki stillerinizi aynen buraya yapıştırın ... */
+    /* Değişen bir şey yok, stiller global kalıyor */
+    :root {
+        --primary-color: #4a148c;
+        --secondary-color: #7b1fa2;
+        --text-color: #333;
+        --light-bg-color: #f7f4ff;
+        --white-color: #ffffff;
+        --max-width: 1200px;
+    }
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background-color: var(--white-color);
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+    header {
+        background: var(--white-color);
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    .header-content {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+    nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
+    }
+    nav a:hover {
+        color: var(--primary-color);
+    }
+    footer {
+        background: var(--text-color);
+        color: var(--light-bg-color);
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    footer a {
+        color: var(--light-bg-color);
+        margin: 0 0.5rem;
+        text-decoration: none;
+        transition: opacity 0.2s ease-in-out;
+    }
+    footer a:hover {
+        opacity: 0.8;
+    }
+</style>
