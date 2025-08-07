@@ -4,22 +4,17 @@ import type { APIRoute } from "astro";
 const languages = ['en', 'tr', 'es']; // Kullandığınız diller
 
 export const GET: APIRoute = async ({ site }) => {
-  // site değerini kontrol edin ve string'e çevirin
-  const siteUrl = typeof site === 'string' ? site : '';
+  // astro.config.mjs'deki site ayarını al
+  const siteUrl = site?.toString() || 'https://www.virtualtarotapp.com';
 
-  if (!siteUrl) {
-    console.error("Site URL'si tanımlı değil veya geçersiz. astro.config.mjs dosyasındaki site alanını kontrol edin.");
-    return new Response("Site URL'si eksik veya geçersiz", { status: 500 });
-  }
+  // URL'lerin sonunda / olduğundan emin ol
+  const baseUrl = siteUrl.endsWith('/') ? siteUrl.slice(0, -1) : siteUrl;
 
-  // siteUrl'nin sonunda / olmadığından emin olun
-  const normalizedSiteUrl = siteUrl.endsWith('/') ? siteUrl.slice(0, -1) : siteUrl;
-
-  const urls = [normalizedSiteUrl + '/']; // Ana sayfa
-
-  languages.forEach(lang => {
-    urls.push(`${normalizedSiteUrl}/${lang}/`);
-  });
+  // Sitemap'e eklenecek tüm URL'leri oluştur
+  const urls = [
+    `${baseUrl}/`, // Ana sayfa
+    ...languages.map(lang => `${baseUrl}/${lang}/`)
+  ];
 
   // Düzgün biçimlendirilmiş XML site haritası
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
