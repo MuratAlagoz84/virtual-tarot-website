@@ -1,6 +1,6 @@
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
+// import sitemap from '@astrojs/sitemap'; // Bu satırı yorum satırı yapın veya silin
 
 export default defineConfig({
   site: 'https://www.virtualtarotapp.com',
@@ -13,7 +13,5 @@ export default defineConfig({
     },
   },
 
-  integrations: [
-    sitemap(), // <-- filename seçeneği olmadan
-  ],
+  // integrations: [sitemap()], // Bu satırı yorum satırı yapın veya silin
 });
