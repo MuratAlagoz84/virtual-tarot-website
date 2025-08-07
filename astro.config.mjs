@@ -14,9 +14,6 @@ export default defineConfig({
   },
 
   integrations: [
-    sitemap({
-      // Sitemap dosyasının adını 'sitemap.xml' olarak belirtiyoruz
-      filename: 'sitemap.xml'
-    }),
+    sitemap(), // <-- filename seçeneği olmadan
   ],
 });
