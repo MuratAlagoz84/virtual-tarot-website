@@ -2,15 +2,16 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  // Vercel için optimizasyon
+  site: 'https://virtualtarotapp.com',
   
-  // i18n (Uluslararasılaştırma) Yapılandırması
+  // Bu ayarı da eklemeyi düşünün
+  trailingSlash: true, // Tüm URL'lerin sonunda / olmasını sağlar (örn: /tr/)
+
   i18n: {
-    defaultLocale: 'en', // 1. ANA DİL İNGİLİZCE OLDU
-    locales: ['en', 'tr', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'ja', 'zh', 'ar'], // 2. DESTEKLENEN DİLLER
+    defaultLocale: 'en',
+    locales: ['en', 'tr', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'ja', 'zh', 'ar'],
     routing: {
-      prefixDefaultLocale: false, // 3. /en/ ÖNEKİ OLMAYACAK, virtualtarotapp.com DOĞRUDAN İNGİLİZCE OLACAK
-      redirectToDefaultLocale: false, // Kullanıcıyı diline göre yönlendirme
+      prefixDefaultLocale: false,
     },
   },
 });
