@@ -5,12 +5,12 @@ const languages = ['en', 'tr', 'es']; // Kullandığınız diller
 
 // Dinamik olarak URL'leri oluşturmak için fonksiyon
 function generateUrls(siteUrl: string, langs: string[]) {
-  const urls = [siteUrl]; // Ana sayfa (siteUrl zaten sonunda / içeriyor olmalı)
+  const urls = [siteUrl]; // Ana sayfa
 
   langs.forEach(lang => {
-    // siteUrl zaten https://www.virtualtarotapp.com/ şeklinde sonunda / ile bitiyorsa,
-    // burada tekrar / eklememeliyiz. Aksi halde // oluşur.
-    urls.push(`${siteUrl}${lang}/`);
+    // siteUrl zaten https://www.virtualtarotapp.com şeklinde sonunda / içeriyor olmalı
+    // Burada her dile özel URL'yi oluştururken doğrudan /lang/ ekliyoruz
+    urls.push(`${siteUrl}/${lang}/`);
   });
 
   return urls;
@@ -22,7 +22,10 @@ export const GET: APIRoute = async ({ site }) => {
     return new Response("Site URL'si eksik", { status: 500 });
   }
 
-  const urls = generateUrls(site, languages);
+  // siteUrl'nin sonunda / olduğundan emin olun
+  const normalizedSiteUrl = site.endsWith('/') ? site.slice(0, -1) : site;
+
+  const urls = generateUrls(normalizedSiteUrl, languages);
 
   // Düzgün biçimlendirilmiş XML site haritası
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
