@@ -31,7 +31,6 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
     <!-- HREFLANG ETİKETLERİ -->
     <link rel="alternate" hreflang="x-default" href="https://virtualtarotapp.com" />
     {alternateLinks.map(link => (
@@ -54,14 +53,14 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
     </main>
     <footer>
         <p>{t.footer.copyright}</p>
-        <a href={`/${lang}/privacy-policy`}>{t.footer.privacyPolicy}</a>
+        <div class="footer-links">
+            <a href={`/${lang}/privacy-policy`}>{t.footer.privacyPolicy}</a>
+            <a href="/terms-of-use">Terms of Use</a>
+        </div>
     </footer>
 </body>
 </html>
-
 <style is:global>
-    /* ... Önceki stillerinizi aynen buraya yapıştırın ... */
-    /* Değişen bir şey yok, stiller global kalıyor */
     :root {
         --primary-color: #4a148c;
         --secondary-color: #7b1fa2;
@@ -114,6 +113,9 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
         text-align: center;
         padding: 1.5rem;
         margin-top: 2rem;
+    }
+    .footer-links {
+        margin-top: 1rem;
     }
     footer a {
         color: var(--light-bg-color);
