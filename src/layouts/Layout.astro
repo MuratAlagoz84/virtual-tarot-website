@@ -6,10 +6,14 @@ import type { UIStrings } from '../i18n/ui'; // Tip tanımını import et
 export interface Props {
     title: string;
     description?: string;
+    keywords?: string;
+    meta?: {
+        [key: string]: any;
+    };
     lang: string; // Hangi dilde olduğunu söyleyen prop
 }
 
-const { title, description, lang } = Astro.props;
+const { title, description, keywords, meta = {}, lang } = Astro.props;
 
 // Mevcut dil için çevirileri al
 const t = translations[lang] || translations.en; // Eğer dil bulunamazsa İngilizce'ye fallback yap
@@ -21,21 +25,60 @@ const alternateLinks = Object.keys(translations).map(locale => ({
 }));
 
 const metaDescription = description || "Illuminate your future with Virtual Tarot. Explore the mysteries of Tarot cards. Download for free on Android and iOS.";
+const metaKeywords = keywords || "tarot, virtual tarot, tarot cards, tarot reading, divination, fortune telling";
 ---
+
 <!DOCTYPE html>
 <html lang={lang}>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content={metaDescription} />
+    <meta name="keywords" content={metaKeywords} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Virtual Tarot Team" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content="https://virtualtarotapp.com/images/og-default.jpg" />
+    <meta property="og:site_name" content="Virtual Tarot" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content="https://virtualtarotapp.com/images/og-default.jpg" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#4a148c" />
+    <meta name="robots" content="index, follow" />
+    
     <title>{title}</title>
+    
     <!-- HREFLANG ETİKETLERİ -->
     <link rel="alternate" hreflang="x-default" href="https://virtualtarotapp.com" />
     {alternateLinks.map(link => (
         <link rel="alternate" hreflang={link.lang} href={`https://virtualtarotapp.com${link.url}`} />
     ))}
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Virtual Tarot",
+        "url": "https://virtualtarotapp.com",
+        "description": metaDescription,
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://virtualtarotapp.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "inLanguage": lang
+    })}></script>
 </head>
 <body>
     <header>
@@ -60,6 +103,7 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
     </footer>
 </body>
 </html>
+
 <style is:global>
     :root {
         --primary-color: #4a148c;
@@ -69,6 +113,7 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
         --white-color: #ffffff;
         --max-width: 1200px;
     }
+    
     body {
         margin: 0;
         font-family: sans-serif;
@@ -76,6 +121,7 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
         color: var(--text-color);
         line-height: 1.6;
     }
+    
     header {
         background: var(--white-color);
         padding: 1rem 2rem;
@@ -84,6 +130,7 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
         top: 0;
         z-index: 100;
     }
+    
     .header-content {
         max-width: var(--max-width);
         margin: 0 auto;
@@ -91,12 +138,14 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
         justify-content: space-between;
         align-items: center;
     }
+    
     .logo {
         font-size: 1.5rem;
         font-weight: bold;
         color: var(--primary-color);
         text-decoration: none;
     }
+    
     nav a {
         color: var(--text-color);
         text-decoration: none;
@@ -104,9 +153,11 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
         font-weight: 500;
         transition: color 0.2s ease-in-out;
     }
+    
     nav a:hover {
         color: var(--primary-color);
     }
+    
     footer {
         background: var(--text-color);
         color: var(--light-bg-color);
@@ -114,15 +165,18 @@ const metaDescription = description || "Illuminate your future with Virtual Taro
         padding: 1.5rem;
         margin-top: 2rem;
     }
+    
     .footer-links {
         margin-top: 1rem;
     }
+    
     footer a {
         color: var(--light-bg-color);
         margin: 0 0.5rem;
         text-decoration: none;
         transition: opacity 0.2s ease-in-out;
     }
+    
     footer a:hover {
         opacity: 0.8;
     }

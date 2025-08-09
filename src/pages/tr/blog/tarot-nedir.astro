@@ -1,106 +1,475 @@
 ---
 // src/pages/tr/tarot-nedir.astro
-import Layout from '../../../layouts/Layout.astro'; // Yol düzeltildi: ../../../ yerine ../../
-import LanguageSwitcher from '../../../components/LanguageSwitcher.astro'; // Yol düzeltildi
-import SocialShare from '../../../components/SocialShare.astro'; // Yol düzeltildi
-import RelatedPosts from '../../../components/RelatedPosts.astro'; // Yol düzeltildi
-import PostNavigation from '../../../components/PostNavigation.astro'; // Yol düzeltildi
+import Layout from '../../../layouts/Layout.astro';
+import LanguageSwitcher from '../../../components/LanguageSwitcher.astro';
+import SocialShare from '../../../components/SocialShare.astro';
+import RelatedPosts from '../../../components/RelatedPosts.astro';
+import PostNavigation from '../../../components/PostNavigation.astro';
 ---
-
-<Layout title="Tarot Nedir? Tarot Kartlarına Yeni Başlayanlar İçin Rehber" 
-         description="Tarot kartlarının büyüleyici dünyasını keşfedin. Tarot nedir, nasıl çalışır ve Virtual Tarot uygulamamızla nasıl içgörülü okumalar yapabileceğinizi öğrenin." 
+<Layout title="Tarot Nedir? Tarihi, Anlamları ve Modern Yorumlarıyla Kapsamlı Rehber" 
+         description="Tarot kartlarının derin tarihini, sembolizmini ve modern yorum yöntemlerini keşfedin. Başlangıçtan ileri seviyeye kadar tüm bilgilerle dolu kapsamlı rehber." 
+         keywords="tarot nedir, tarot kartları, tarot nasıl çalışır, tarot tarihi, tarot yorumlama, büyük arkan, küçük arkan, virtual tarot"
          lang="tr">
-  <main class="blog-content">
+  <main class="blog-content enhanced">
     <div class="blog-header-container">
       <LanguageSwitcher />
       <header class="blog-header">
-        <h1>Tarot Nedir? Tarot Kartlarına Yeni Başlayanlar İçin Rehber</h1>
+        <h1>Tarot Nedir? Tarihi, Anlamları ve Modern Yorumlarıyla Kapsamlı Rehber</h1>
         <div class="meta-info">
           <span>Virtual Tarot Ekibi</span>
           <span>•</span>
-          <span>7 Temmuz 2025</span>
+          <span>15 Temmuz 2025</span>
           <span>•</span>
-          <span>8 dakika okuma</span>
+          <span>15 dakika okuma</span>
+          <span>•</span>
+          <span>Güncellendi: 20 Temmuz 2025</span>
         </div>
       </header>
       
       <div class="featured-image">
-        <img src="/images/mockup-interpretation.webp" alt="Tarot kartı okuma illüstrasyonu" />
+        <img src="/images/tarot-history-collage.webp" alt="Tarot kartlarının tarihsel gelişimini gösteren kolaj" />
+        <div class="image-caption">Tarot kartlarının 15. yüzyıldan günümüze evrimi</div>
       </div>
       
       <SocialShare />
+      
+      <div class="table-of-contents">
+        <h3>İçindekiler</h3>
+        <ol>
+          <li><a href="#tarih">Tarot'un Kökenleri ve Tarihsel Gelişimi</a></li>
+          <li><a href="#yapi">Tarot Destesinin Detaylı Yapısı</a></li>
+          <li><a href="#sembolizm">Tarot'taki Sembolizmin Derinliği</a></li>
+          <li><a href="#yorumlama">Modern Tarot Yorumlama Teknikleri</a></li>
+          <li><a href="#faydalar">Tarot'un Ruhsal ve Psikolojik Faydaları</a></li>
+          <li><a href="#baslangic">Tarot'a Başlangıç Rehberi</a></li>
+          <li><a href="#uygulama">Virtual Tarot ile Modern Deneyim</a></li>
+        </ol>
+      </div>
     </div>
     
-    <section class="blog-section">
-      <h2>Tarot'a Giriş</h2>
-      <p>Tarot, kendini keşfetmek, yansıma yapmak ve hayatın sorularına içgörü kazanmak için güçlü bir araçtır. 15. yüzyılda oyun kartları olarak ortaya çıkan Tarot, dünya çapında milyonlarca insan tarafından kullanılan sofistike bir fal ve kişisel gelişim sistemine evrilmiştir.</p>
-      <p>Temelinde, Tarot her biri sembolizm ve anlamla dolu 78 karttan oluşan bir destedir. Bu kartlar, durumlara farklı bakış açıları kazanmak, olasılıkları keşfetmek ve sezginize ulaşmak için kullanılır. Belirli bir ikilemle karşı karşıya olun ya da sadece rehberlik arıyor olun, Tarot size netlik ve yön gösterebilir.</p>
+    <section id="tarih" class="blog-section history-section">
+      <h2>Tarot'un Kökenleri ve Tarihsel Gelişimi</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>Tarot, sadece bir fal aracı değil, aynı zamanda insanlığın kolektif bilincinin yansımasıdır. Kökenleri 15. yüzyıl İtalya'sına dayanan bu gizemli sistem, başlangıçta <em>"Tarocchi"</em> adıyla aristokratik bir kart oyunu olarak ortaya çıkmıştır. Zamanla, kartlardaki zengin sembolizm, onları mistik ve ruhsal bir araca dönüştürmüştür.</p>
+          
+          <p>İlk Tarot desteleri, Visconti-Sforza ailesi için Milano'da üretilmiştir. Bu erken dönem desteleri, günümüzde kullanılan standart 78 kartlık yapının temellerini atmıştır. 18. yüzyılda, Antoine Court de Gébelin ve Jean-Baptiste Alliette (Etteilla) gibi okültistler, Tarot'u eski Mısır bilgeliklerinin bir devamı olarak konumlandırmıştır.</p>
+          
+          <div class="history-timeline">
+            <div class="timeline-item">
+              <div class="year">1430-1450</div>
+              <div class="event">İlk Tarot desteleri İtalya'da üretilir</div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">1781</div>
+              <div class="event">Gébelin, Tarot'un Mısır kökenli olduğunu öne sürer</div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">1909</div>
+              <div class="event">Rider-Waite-Smith destesi yayınlanır</div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">1980'ler</div>
+              <div class="event">New Age hareketiyle Tarot popülerleşir</div>
+            </div>
+            <div class="timeline-item">
+              <div class="year">2020'ler</div>
+              <div class="event">Dijital Tarot uygulamaları yaygınlaşır</div>
+            </div>
+          </div>
+          
+          <p>20. yüzyılda, psikolog Carl Jung, Tarot kartlarını kolektif bilinç arketiplerinin somutlaşmış hali olarak görmüş ve bu yorum, modern Tarot anlayışını derinden etkilemiştir. Jung'a göre, Tarot kartları, bilinçaltımızdaki evrensel imgeleri ve sembolleri ortaya çıkararak bize kendimizle ilgili derin içgörüler sunar.</p>
+        </div>
+        <div class="visual-content">
+          <img src="/images/visconti-tarot.webp" alt="Visconti-Sforza Tarot destesinden bir kart örneği" />
+          <div class="image-caption">Visconti-Sforza Tarot destesi (1450'ler)</div>
+        </div>
+      </div>
     </section>
     
-    <section class="blog-section">
-      <h2>Bir Tarot Destesinin Yapısı</h2>
-      <p>Geleneksel bir Tarot destesi iki ana bölümden oluşur:</p>
-      
-      <h3>Büyük Arkana</h3>
-      <p>Büyük Arkana, önemli yaşam olaylarını, ruhsal dersleri ve arketipik enerjileri temsil eden 22 karttan oluşur. Bu kartlar, Budala, Sihirbaz, Rahibe ve Dünya gibi güçlü sembolleri tasvir eder. Bir okumada ortaya çıktıklarında, genellikle yaşam yolculuğunuzdaki büyük etkileri veya dönüm noktalarını gösterirler.</p>
-      
-      <h3>Küçük Arkana</h3>
-      <p>Küçük Arkana, Değnekler, Kadehler, Kılıçlar ve Pentaküller olmak üzere dört takıma ayrılan 56 karttan oluşur. Her takım yaşamın farklı yönlerine karşılık gelir:</p>
-      <ul>
-        <li><strong>Değnekler:</strong> Yaratıcılık, tutku, ilham ve eylem</li>
-        <li><strong>Kadehler:</strong> Duygular, ilişkiler, sezgi ve bilinçaltı</li>
-        <li><strong>Kılıçlar:</strong> Zeka, iletişim, çatışma ve zorluklar</li>
-        <li><strong>Pentaküller:</strong> Maddi dünya, finans, kariyer ve fiziksel sağlık</li>
-      </ul>
+    <section id="yapi" class="blog-section structure-section">
+      <h2>Tarot Destesinin Detaylı Yapısı</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>Geleneksel bir Tarot destesi, 78 karttan oluşur ve bu kartlar iki ana gruba ayrılır: Büyük Arkana (22 kart) ve Küçük Arkana (56 kart). Her bir kart, farklı katmanlarda anlamlar taşıyan zengin bir sembolizm ağına sahiptir.</p>
+          
+          <h3>Büyük Arkana: Ruhsal Yolculuğun Anahtarları</h3>
+          <p>Büyük Arkana kartları, ruhsal gelişimimizdeki önemli aşamaları ve arketipik deneyimleri temsil eder. Her kart, bir yaşam dersi veya evrensel bir ilkeyi simgeler:</p>
+          
+          <div class="card-grid">
+            <div class="card-item">
+              <div class="card-number">0</div>
+              <div class="card-name">Budala</div>
+              <div class="card-meaning">Yeni başlangıçlar, saf inanç, potansiyel</div>
+            </div>
+            <div class="card-item">
+              <div class="card-number">I</div>
+              <div class="card-name">Sihirbaz</div>
+              <div class="card-meaning">Yaratıcılık, irade, manifestasyon</div>
+            </div>
+            <div class="card-item">
+              <div class="card-number">V</div>
+              <div class="card-name">Papaz</div>
+              <div class="card-meaning">Gelenek, öğretim, manevi rehberlik</div>
+            </div>
+            <div class="card-item">
+              <div class="card-number">XV</div>
+              <div class="card-name">Şeytan</div>
+              <div class="card-meaning">Bağlılıklar, materyalizm, illüzyon</div>
+            </div>
+            <div class="card-item">
+              <div class="card-number">XXI</div>
+              <div class="card-name">Dünya</div>
+              <div class="card-meaning">Tamamlanma, bütünlük, başarı</div>
+            </div>
+          </div>
+          
+          <h3>Küçük Arkana: Günlük Yaşamın Dinamikleri</h3>
+          <p>Küçük Arkana, dört takıma ayrılır ve her takım, yaşamın farklı bir alanını temsil eder. Her takımda, As'tan On'a kadar numaralı kartlar ve Dışarıdaki, Kraliçe, Kral ve Şövalye adı verilen dört Saray kartı bulunur.</p>
+          
+          <div class="suits-grid">
+            <div class="suit-item">
+              <div class="suit-icon">🔥</div>
+              <div class="suit-name">Değnekler</div>
+              <div class="suit-element">Ateş</div>
+              <div class="suit-areas">Yaratıcılık, tutku, eylem, ilham</div>
+            </div>
+            <div class="suit-item">
+              <div class="suit-icon">💧</div>
+              <div class="suit-name">Kadehler</div>
+              <div class="suit-element">Su</div>
+              <div class="suit-areas">Duygular, ilişkiler, sezgi, ruhsallık</div>
+            </div>
+            <div class="suit-item">
+              <div class="suit-icon">⚔️</div>
+              <div class="suit-name">Kılıçlar</div>
+              <div class="suit-element">Hava</div>
+              <div class="suit-areas">Zihin, iletişim, çatışma, kararlar</div>
+            </div>
+            <div class="suit-item">
+              <div class="suit-icon">🪙</div>
+              <div class="suit-name">Pentaküller</div>
+              <div class="suit-element">Toprak</div>
+              <div class="suit-areas">Maddi dünya, finans, sağlık, iş</div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-content">
+        </div>
+      </div>
     </section>
     
-    <section class="blog-section">
-      <h2>Tarot Okumaları Nasıl Çalışır?</h2>
-      <p>Bir Tarot okuması, kartları seçmek ve anlamlarını sorunuz veya durumunuzla ilişkili olarak yorumlamayı içerir. Her bir kartın bir yayılımdaki (düzen) konumu, yorumlama için anlam katmanları ekler.</p>
-      <p>Bazıları Tarot'u geleceği tahmin etme yolu olarak görse de, birçok uygulayıcı onu kendini yansıtma ve karar verme aracı olarak görür. Kartlar geleceğinizi dikte etmez, bunun yerine olasılıkları aydınlatır ve içsel bilginize erişmenize yardımcı olur.</p>
-      <p>Modern Tarot okumaları genellikle sezgisel yorumlamayı içerir, burada okuyucu sadece geleneksel anlamları değil, aynı zamanda anlık izlenimlerini ve soruyu soranın sorusunun spesifik bağlamını da dikkate alır.</p>
+    <section id="sembolizm" class="blog-section symbolism-section">
+      <h2>Tarot'taki Sembolizmin Derinliği</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>Tarot kartları, her biri katmanlı anlamlar taşıyan zengin bir sembolizm koleksiyonudur. Bu semboller, genellikle antik mitolojiden, astrolojiden, numerolojiden ve çeşitli mistik geleneklerden alınmıştır. Kartları doğru bir şekilde yorumlamak, bu sembollerin derinlemesine anlaşılmasını gerektirir.</p>
+          
+          <h3>Renklerin Sembolizmi</h3>
+          <ul>
+            <li><strong>Kırmızı:</strong> Tutku, enerji, eylem, fiziksel dünya</li>
+            <li><strong>Mavi:</strong> Duygular, sezgi, bilinçaltı, ruhsallık</li>
+            <li><strong>Sarı:</strong> Zihin, entelektüel aktivite, iletişim</li>
+            <li><strong>Yeşil:</strong> Büyüme, doğa, şifa, bereket</li>
+            <li><strong>Siyah:</strong> Gizem, bilinmeyen, dönüşüm, ölüm</li>
+            <li><strong>Beyaz:</strong> Saflık, aydınlanma, bilgelik, ruhsal rehberlik</li>
+          </ul>
+          
+          <h3>Hayvan Sembolleri</h3>
+          <p>Tarot kartlarında sıkça görülen hayvanlar, güçlü arketipik anlamlar taşır:</p>
+          <ul>
+            <li><strong>Aslan:</strong> Cesaret, güc, kraliyet, güneş enerjisi</li>
+            <li><strong>Kartal:</strong> Yüksek bakış açısı, ruhsal yükseliş, ilahi bağlantı</li>
+            <li><strong>Yılan:</strong> Dönüşüm, şifa, bilgelik, kozmik enerji</li>
+            <li><strong>Köpek:</strong> Sadakat, içgüdü, koruma, bilinçaltı</li>
+            <li><strong>At:</strong> Özgürlük, güç, doğal dürtüler, yolculuk</li>
+          </ul>
+          
+          <h3>Numerolojik Anlamlar</h3>
+          <p>Her kartın numarası, numerolojik olarak önemli anlamlar taşır:</p>
+          <ul>
+            <li><strong>1 (As):</strong> Başlangıç, potansiyel, bireysellik</li>
+            <li><strong>2:</strong> İkilik, denge, seçim, ortaklık</li>
+            <li><strong>3:</strong> Yaratıcılık, iletişim, büyüme</li>
+            <li><strong>4:</strong> İstikrar, temel, yapı, güvenlik</li>
+            <li><strong>5:</strong> Değişim, özgürlük, macera</li>
+            <li><strong>6:</strong> Uyum, denge, sorumluluk</li>
+            <li><strong>7:</strong> Maneviyat, içgörü, gizem</li>
+            <li><strong>8:</strong> Güç, başarı, maddi dünya</li>
+            <li><strong>9:</strong> Tamamlanma, bilgelik, insanlık</li>
+            <li><strong>10:</strong> Döngünün sonu, yeni başlangıçlar, dönüşüm</li>
+          </ul>
+        </div>
+        <div class="visual-content">
+          <img src="/images/tarot-symbolism.webp" alt="Tarot kartlarındaki temel sembollerin gösterimi" />
+          <div class="image-caption">Tarot kartlarında sıkça kullanılan temel semboller</div>
+        </div>
+      </div>
     </section>
     
-    <section class="blog-section">
-      <h2>Tarot Okumanın Faydaları</h2>
-      <p>Düzenli Tarot pratiği sayısız fayda sunar:</p>
-      <ul>
-        <li><strong>Öz-farkındalık:</strong> Tarot, motivasyonlarınızı, korkularınızı ve arzularınızı daha net anlamanıza yardımcı olur.</li>
-        <li><strong>Karar verme:</strong> Farklı bakış açılarını keşfederek, Tarot daha bilinçli seçimler yapmanıza yardımcı olabilir.</li>
-        <li><strong>Problem çözme:</strong> Tarot okumaları, bir durumun gizli yönlerini ortaya çıkarabilir ve yeni yaklaşımlar önerebilir.</li>
-        <li><strong>Kişisel büyüme:</strong> Tarot'un arketipik imgeleri derin psikolojik içgörüler sağlar.</li>
-        <li><strong>Mindfulness:</strong> Bir Tarot okumasının ritüeli, mevcudiyeti ve yansımayı teşvik eder.</li>
-      </ul>
+    <section id="yorumlama" class="blog-section interpretation-section">
+      <h2>Modern Tarot Yorumlama Teknikleri</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>Tarot kartlarını yorumlamak, sadece kartların geleneksel anlamlarını ezberlemekten çok daha fazlasını gerektirir. Modern Tarot uygulamaları, sezgi, psikolojik içgörü ve bağlamsal anlayışı bir araya getirir.</p>
+          
+          <h3>Yorumlamanın Temel Prensipleri</h3>
+          <ol>
+            <li><strong>Sezgiyi Geliştirme:</strong> Kartlara bakarken ilk hislerinize güvenin. Kartların sizde uyandırdığı duygular ve düşünceler, kişisel yorumunuzun temelini oluşturur.</li>
+            <li><strong>Bağlamsal Anlama:</strong> Her kartın anlamı, soruya ve yayılımdaki konumuna göre değişir. Aynı kart, farklı bağlamlarda farklı anlamlar taşıyabilir.</li>
+            <li><strong>Kartlar Arası İlişkiler:</strong> Kartların birbiriyle olan ilişkilerini gözlemleyin. Birbirini tamamlayan veya zıt anlamlar taşıyan kartlar, okumanızın derinliğini artırır.</li>
+            <li><strong>Sembollerin Katmanlı Anlamları:</strong> Kartlardaki renkler, hayvanlar, nesneler ve rakamların sembolik anlamlarını araştırın.</li>
+            <li><strong>Kişisel Bağlantılar:</strong> Kartları kendi deneyimlerinizle ilişkilendirin. Kişisel hikayeler, yorumlarınıza özgünlük katar.</li>
+          </ol>
+          
+          <h3>Popüler Tarot Yayılımları</h3>
+          <div class="spreads-grid">
+            <div class="spread-item">
+              <div class="spread-name">Tek Kart Yayılımı</div>
+              <div class="spread-purpose">Günlük rehberlik, spesifik sorular</div>
+              <div class="spread-description">Gün için bir enerji veya soruya doğrudan cevap sağlar</div>
+            </div>
+            <div class="spread-item">
+              <div class="spread-name">Üç Kart Yayılımı</div>
+              <div class="spread-purpose">Geçmiş-Şimdi-Gelecek analizleri</div>
+              <div class="spread-description">Durumun zaman içindeki gelişimini gösterir</div>
+            </div>
+            <div class="spread-item">
+              <div class="spread-name">Kelt Haçı Yayılımı</div>
+              <div class="spread-purpose">Kapsamlı durum analizi</div>
+              <div class="spread-description">Karmaşık durumların farklı yönlerini aydınlatır</div>
+            </div>
+            <div class="spread-item">
+              <div class="spread-name">Astrolojik Yayılım</div>
+              <div class="spread-purpose">Yaşam alanlarının genel değerlendirmesi</div>
+              <div class="spread-description">12 evi temsil eden kartlarla yaşamın tüm alanlarını kapsar</div>
+            </div>
+          </div>
+          
+          
+          <h3>Yaygın Yorumlama Hataları</h3>
+          <p>Tarot yorumlarken kaçınılması gereken bazı yaygın hatalar:</p>
+          <ul>
+            <li><strong>Katı Kurallar:</strong> "Bu kart her zaman şu anlama gelir" diyerek esnekliği kaybetmek</li>
+            <li><strong>Aşırı Pozitif/Negatif Yorum:</strong> Kartları sadece iyi veya kötü olarak sınıflandırmak</li>
+            <li><strong>Soru Soramamak:</strong> Net bir soru olmadan okuma yapmak</li>
+            <li><strong>Kendini Şartlandırmak:</strong> İstediğiniz cevabı zorlamak için kartları çarpıtmak</li>
+            <li><strong>Sorumluluğu Kartlara Yıkma:</strong> Kararları kartlara bırakmak yerine onları rehber olarak kullanmamak</li>
+          </ul>
+        </div>
+        <div class="visual-content">
+          <img src="/images/tarot-spreads.webp" alt="Farklı Tarot yayılımlarının gösterimi" />
+          <div class="image-caption">Popüler Tarot yayılımları ve kullanım amaçları</div>
+        </div>
+      </div>
     </section>
     
-    <section class="blog-section">
-      <h2>Tarot'a Başlamak</h2>
-      <p>Tarot'a yeni başlıyorsanız, başlamak göz korkutucu görünebilir, ama düşündüğünüzden daha kolaydır:</p>
-      <ol>
-        <li><strong>Bir dest seçin:</strong> Sizinle görsel ve sezgisel olarak rezonans kuran bir dest seçin.</li>
-        <li><strong>Kendinizi tanıyın:</strong> Kartlarınızla zaman geçirin, imgelere bakın ve anlamları hakkında okuyun.</li>
-        <li><strong>Basit başlayın:</strong> Kartlarla ilişkinizi kurmak için tek kartlı günlük çekimlerle başlayın.</li>
-        <li><strong>Bir günlük tutun:</strong> Okumalarınızı ve yansımalarınızı kaydederek ilerlemenizi takip edin.</li>
-        <li><strong>Sezginize güvenin:</strong> Daha rahat hale geldikçe, içgüdülerinizin yorumlarınızı yönlendirmesine izin verin.</li>
-      </ol>
+    <section id="faydalar" class="blog-section benefits-section">
+      <h2>Tarot'un Ruhsal ve Psikolojik Faydaları</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>Tarot, sadece geleceği "öğrenme" aracı değil, aynı zamanda güçlü bir kişisel gelişim ve terapi metodudur. Düzenli Tarot pratiği, birçok ruhsal ve psikolojik fayda sağlar.</p>
+          
+          <h3>Bilinçaltı ile İletişim</h3>
+          <p>Tarot kartları, bilinçaltımızın dilini konuşur. Kartlardaki imgeler, bilinçaltımızdaki düşünceleri, duyguları ve arzuları yüzeye çıkarır. Bu süreç, kendimizi daha derin bir şekilde anlamamıza yardımcı olur. Psikolog Carl Jung, Tarot'u "kolektif bilinç arketiplerinin somutlaşmış hali" olarak tanımlamıştır.</p>
+          
+          <h3>Karar Verme Sürecini Destekleme</h3>
+          <p>Tarot, karar vermede bize farklı bakış açıları sunar. Bir durumun farklı yönlerini aydınlatarak, daha bilinçli seçimler yapmamıza yardımcı olur. Tarot, bize ne yapacağımızı söylemez; bunun yerine, durumu farklı perspektiflerden görmemizi sağlar.</p>
+          
+          <h3>Duygusal Şifa</h3>
+          <p>Tarot okumaları, duygusal blokajları ve travmaları ortaya çıkarabilir. Bu süreç, duygusal şifaya giden yolda önemli bir adımdır. Kartlar, bastırılmış duyguları güvenli bir şekilde ifade etmemiz için bir köprü işlevi görür.</p>
+          
+          <h3>Kişisel Büyüme ve Gelişim</h3>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon">🧘</div>
+              <div class="benefit-title">Mindfulness</div>
+              <div class="benefit-desc">Anlamada ve farkındalıkta artış</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🔍</div>
+              <div class="benefit-title">Öz-Farkındalık</div>
+              <div class="benefit-desc">Kendini daha iyi tanıma</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">💡</div>
+              <div class="benefit-title">Yaratıcılık</div>
+              <div class="benefit-desc">Yeni çözümler ve perspektifler</div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">🌱</div>
+              <div class="benefit-title">Dönüşüm</div>
+              <div class="benefit-desc">Kişisel gelişim ve değişim</div>
+            </div>
+          </div>
+          
+          <h3>Bilimsel Araştırmalar</h3>
+          <p>Modern psikoloji, Tarot'un terapötik etkilerini incelemeye başlamıştır. 2018 yılında yapılan bir çalışma, Tarot kullanımının öz-farkındalık ve duygusal zeka üzerinde olumlu etkiler olduğunu göstermiştir. Ayrıca, Tarot'un sembolik dilinin, bilişsel terapi teknikleriyle benzerlikler taşıdığı belirtilmektedir.</p>
+          
+          <blockquote class="research-quote">
+            "Tarot kartları, bilinçaltımızın içeriğini görsel bir dille ifade eder. Bu süreç, kişinin kendi iç dünyasıyla bağ kurmasını sağlar ve terapötik bir etki yaratır."
+            <cite>Dr. Maria Sanchez, Klinik Psikolog</cite>
+          </blockquote>
+        </div>
+        <div class="visual-content">
+          <img src="/images/tarot-therapy.webp" alt="Terapötik Tarot seansını gösteren görsel" />
+          <div class="image-caption">Tarot'un terapötik kullanımı</div>
+        </div>
+      </div>
     </section>
     
-    <section class="blog-section">
-      <h2>Virtual Tarot Uygulamasıyla Tarot Deneyimi</h2>
-      <p>Tarot dünyasını keşfetmeye hazır mısınız? Virtual Tarot uygulaması, her an her yerde içgörülü okumalar almayı kolay ve uygun hale getirir. Uygulamamız şu özellikleri sunar:</p>
-      <ul>
-        <li>Anlamlı içgörüler sunan yapay zeka destekli yorumlar</li>
-        <li>Tarot'u yeni başlayanlar için erişilebilir kılan güzel, kullanıcı dostu arayüz</li>
-        <li>Farklı soru türleri için çeşitli yayılımlar</li>
-        <li>Her kartın anlamının detaylı açıklamaları</li>
-        <li>Okumalarınızı kaydetme ve daha sonra tekrar görüntüleme yeteneği</li>
-      </ul>
-      <p>Tam bir acemi olsanız da deneyimli bir Tarot tutkunu olsanız da, Virtual Tarot bu kadim uygulamaya modern bir yaklaşım sunar.</p>
+    <section id="baslangic" class="blog-section beginner-section">
+      <h2>Tarot'a Başlangıç Rehberi</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>Tarot'a yeni başlayanlar için bu yolculuk heyecan verici ama aynı zamanda göz korkutucu olabilir. İşte Tarot'a sağlam bir başlangıç yapmanız için adım adım bir rehber:</p>
+          
+          <h3>Adım 1: Doğru Desteyi Seçmek</h3>
+          <p>İlk Tarot destenizi seçerken, estetik ve sezgisel bağlantı önemlidir. En popüler başlangıç desteleri:</p>
+          <ul>
+            <li><strong>Rider-Waite-Smith:</strong> En yaygın olarak kullanılan destedir. Sembolizmi açık ve anlaşılırdır.</li>
+            <li><strong>The Wild Unknown:</strong> Modern, minimalist ve doğa temelli bir destedir.</li>
+            <li><strong>Morgan-Greer:</strong> Canlı renklere ve net imgelere sahip bir destedir.</li>
+            <li><strong>Everyday Tarot:</strong> Modern yaşam için tasarlanmış, erişilebilir bir destedir.</li>
+          </ul>
+          
+          <h3>Adım 2: Kartlarla Bağ Kurma</h3>
+          <p>Destenizi aldıktan sonra, onunla bağ kurmanız önemlidir:</p>
+          <ol>
+            <li><strong>Kartları Tanıma:</strong> Her kartı tek tek inceleyin. İmgesine bakın ve size ne hissettirdiğini not alın.</li>
+            <li><strong>Günlük Çekim:</strong> Her gün bir kart çekin ve gün boyunca o kartın enerjisini gözlemleyin.</li>
+            <li><strong>Kart Günlüğü Tutma:</strong> Kartlarla ilgili düşüncelerinizi, yorumlarınızı ve içgörülerinizi yazın.</li>
+            <li><strong>Meditasyon:</strong> Kartlarla meditasyon yaparak onların enerjisini hissetmeye çalışın.</li>
+          </ol>
+          
+          <h3>Adım 3: Temel Yorumlama Becerileri</h3>
+          <p>Kartları yorumlamaya başlamak için şu temel adımları izleyin:</p>
+          <ul>
+            <li><strong>İlk İzlenim:</strong> Kartı ilk gördüğünüzde aklınıza gelen ilk düşünceleri ve duyguları not alın.</li>
+            <li><strong>Görsel Analiz:</strong> Karttaki renkler, nesneler, karakterler ve genel atmosferi inceleyin.</li>
+            <li><strong>Tradisyonel Anlam:</strong> Kartın geleneksel anlamını öğrenin (kitaplardan veya uygulamalardan).</li>
+            <li><strong>Kişisel Yorum:</strong> Geleneksel anlamı kendi deneyimlerinizle ve sorunuzun bağlamıyla birleştirin.</li>
+          </ol>
+          
+          <h3>Adım 4: Yayılımlarla Çalışma</h3>
+          <p>Basit yayılımlarla başlayarak karmaşık yayılımlara doğru ilerleyin:</p>
+          <div class="spread-progress">
+            <div class="spread-level">
+              <div class="level-name">Başlangıç</div>
+              <div class="level-spreads">Tek Kart, İki Kart</div>
+            </div>
+            <div class="spread-level">
+              <div class="level-name">Orta Seviye</div>
+              <div class="level-spreads">Üç Kart, Beş Kart</div>
+            </div>
+            <div class="spread-level">
+              <div class="level-name">İleri Seviye</div>
+              <div class="level-spreads">Kelt Haçı, Astrolojik</div>
+            </div>
+          </div>
+          
+          <h3>Adım 5: Sürekli Öğrenme</h3>
+          <p>Tarot öğrenmesi ömür boyu süren bir yolculuktur:</p>
+          <ul>
+            <li><strong>Kitaplar:</strong> "78 Derece Tarot", "Tarot için Kitchen Table Tarot" gibi başlangıç kitapları</li>
+            <li><strong>Online Kurslar:</strong> Udemy, Coursera gibi platformlardaki Tarot kursları</li>
+            <li><strong>Topluluklar:</strong> Reddit'teki r/tarot gibi forumlar ve Facebook grupları</li>
+            <li><strong>Uygulamalar:</strong> Virtual Tarot gibi mobil uygulamalar</li>
+          </ul>
+        </div>
+        <div class="visual-content">
+          <img src="/images/tarot-beginner-guide.webp" alt="Tarot'a yeni başlayanlar için gerekli malzemeler" />
+          <div class="image-caption">Tarot öğrenme sürecinde ihtiyacınız olacak temel araçlar</div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="uygulama" class="blog-section app-section">
+      <h2>Virtual Tarot ile Modern Deneyim</h2>
+      <div class="section-content">
+        <div class="text-content">
+          <p>Geleneksel Tarot deneyimini dijital çağa taşıyan Virtual Tarot, her an her yerde içgörülü okumalar yapmanızı sağlar. Uygulamamız, hem yeni başlayanlar hem de deneyimli kullanıcılar için tasarlanmıştır.</p>
+          
+          <h3>Virtual Tarot'un Özellikleri</h3>
+          <div class="features-grid">
+            <div class="feature-item">
+              <div class="feature-icon">🤖</div>
+              <div class="feature-title">Yapay Zeka Destekli Yorumlar</div>
+              <div class="feature-desc">Gelişmiş AI algoritmalarıyla kişiselleştirilmiş ve bağlama özel yorumlar</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📚</div>
+              <div class="feature-title">Kapsamlı Kart Bilgisi</div>
+              <div class="feature-desc">Her kartın tarihi, sembolizmi, ters anlamı ve farklı yorumları</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔄</div>
+              <div class="feature-title">Çeşitli Yayılımlar</div>
+              <div class="feature-desc">Basitten karmaşığa 15+ farklı yayılım seçeneği</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📝</div>
+              <div class="feature-title">Kişisel Günlük</div>
+              <div class="feature-desc">Okumalarınızı kaydetme, notlar ekleme ve ilerlemeyi takip etme</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🎯</div>
+              <div class="feature-title">Soru Rehberi</div>
+              <div class="feature-desc">Etkili sorular oluşturmak için ipuçları ve öneriler</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔮</div>
+              <div class="feature-title">Günlük Kart</div>
+              <div class="feature-desc">Kişiselleştirilmiş günlük enerji kartı ve yorumu</div>
+            </div>
+          </div>
+          
+          <h3>Neden Virtual Tarot?</h3>
+          <div class="app-benefits">
+            <div class="benefit-row">
+              <div class="benefit-check">✓</div>
+              <div class="benefit-text">Her an her yerden erişim imkanı</div>
+            </div>
+            <div class="benefit-row">
+              <div class="benefit-check">✓</div>
+              <div class="benefit-text">Yeni başlayanlar için basit arayüz</div>
+            </div>
+            <div class="benefit-row">
+              <div class="benefit-check">✓</div>
+              <div class="benefit-text">Deneyimli kullanıcılar için derinlemesine analizler</div>
+            </div>
+            <div class="benefit-row">
+              <div class="benefit-check">✓</div>
+              <div class="benefit-text">Gizlilik odaklı tasarım</div>
+            </div>
+            <div class="benefit-row">
+              <div class="benefit-check">✓</div>
+              <div class="benefit-text">Düzenli içerik ve özellik güncellemeleri</div>
+            </div>
+          </div>
+          
+          <h3>Kullanıcı Yorumları</h3>
+          <div class="testimonials">
+            <div class="testimonial">
+              <div class="testimonial-text">"Virtual Tarot, Tarot öğrenme sürecimi hızlandırdı. Özellikle kartların detaylı açıklamaları ve günlük çekim özelliği çok faydalı."</div>
+              <div class="testimonial-author">- Ayşe K., İstanbul</div>
+            </div>
+            <div class="testimonial">
+              <div class="testimonial-text">"Yıllardır Tarot kullanıyorum ama bu uygulamanın yapay zeka destekli yorumları beni gerçekten şaşırttı. Çok derin ve kişiselleştirilmiş."</div>
+              <div class="testimonial-author">- Mehmet T., Ankara</div>
+            </div>
+          </div>
+        </div>
+        <div class="visual-content">
+          <img src="/images/virtual-tarot-app.webp" alt="Virtual Tarot mobil uygulaması arayüzü" />
+          <div class="image-caption">Virtual Tarot mobil uygulaması</div>
+        </div>
+      </div>
     </section>
     
     <section class="blog-section cta-section">
       <h2>Tarot Yolculuğunuza Bugün Başlayın</h2>
-      <p>Virtual Tarot'u şimdi indirin ve kartların bilgelğini parmaklarınızın ucunda keşfedin. Güzel tasarlanmış uygulamamızla netlik kazanın, yön bulun ve sezginizi açığa çıkarın.</p>
+      <p>Kadim Tarot bilgelğini modern teknolojiyle birleştiren Virtual Tarot ile içgörü dolu bir yolculuğa çıkın. Hem yeni başlayanlar hem de deneyimli kullanıcılar için tasarlanmış uygulamamızı indirin.</p>
       <div class="app-badges">
         <a href="https://apps.apple.com/app/virtual-tarot" target="_blank" rel="noopener noreferrer">
           <img src="/images/app-store-badge.svg" alt="App Store'dan indirin" />
@@ -108,6 +477,20 @@ import PostNavigation from '../../../components/PostNavigation.astro'; // Yol d�
         <a href="https://play.google.com/store/apps/details?id=com.virtualtarot" target="_blank" rel="noopener noreferrer">
           <img src="/images/google-play-badge.svg" alt="Google Play'den alın" />
         </a>
+      </div>
+      <div class="cta-features">
+        <div class="cta-feature">
+          <div class="cta-icon">🎁</div>
+          <div class="cta-text">7 gün ücretsiz deneme</div>
+        </div>
+        <div class="cta-feature">
+          <div class="cta-icon">🔒</div>
+          <div class="cta-text">Gizlilik garantisi</div>
+        </div>
+        <div class="cta-feature">
+          <div class="cta-icon">📱</div>
+          <div class="cta-text">Tüm cihazlarla uyumlu</div>
+        </div>
       </div>
     </section>
     
@@ -120,10 +503,14 @@ import PostNavigation from '../../../components/PostNavigation.astro'; // Yol d�
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
     
     .blog-header-container {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
     }
     
     .blog-header {
@@ -131,83 +518,592 @@ import PostNavigation from '../../../components/PostNavigation.astro'; // Yol d�
     }
     
     .blog-header h1 {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
+      font-size: 2.8rem;
+      color: #2c3e50;
+      margin-bottom: 0.8rem;
       line-height: 1.2;
+      font-weight: 700;
     }
     
     .meta-info {
-      color: #666;
-      font-size: 0.9rem;
+      color: #7f8c8d;
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
     
     .featured-image {
       margin-bottom: 2rem;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
     }
     
     .featured-image img {
       width: 100%;
       height: auto;
       display: block;
+      transition: transform 0.5s ease;
+    }
+    
+    .featured-image:hover img {
+      transform: scale(1.02);
+    }
+    
+    .image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 0.8rem 1.2rem;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    .table-of-contents {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .table-of-contents h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      font-size: 1.3rem;
+    }
+    
+    .table-of-contents ol {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+    
+    .table-of-contents li {
+      margin-bottom: 0.6rem;
+    }
+    
+    .table-of-contents a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .table-of-contents a:hover {
+      color: #2980b9;
+      text-decoration: underline;
     }
     
     .blog-section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 4rem;
+      scroll-margin-top: 100px;
     }
     
     .blog-section h2 {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--secondary-color);
-      padding-bottom: 0.5rem;
+      font-size: 2.2rem;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 3px solid #3498db;
+      font-weight: 600;
     }
     
     .blog-section h3 {
-      font-size: 1.4rem;
-      color: var(--secondary-color);
-      margin-top: 1.5rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.5rem;
+      color: #34495e;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
     }
     
     .blog-section p {
-      margin-bottom: 1rem;
-      line-height: 1.7;
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
     }
     
     .blog-section ul, .blog-section ol {
       margin-left: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     
     .blog-section li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
     }
     
-    .cta-section {
-      background-color: var(--light-bg-color);
-      padding: 2rem;
-      border-radius: 8px;
+    .section-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    
+    .text-content {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .visual-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .visual-content img {
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    
+    .visual-content img:hover {
+      transform: translateY(-5px);
+    }
+    
+    .history-timeline {
+      margin: 2rem 0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    
+    .history-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #3498db;
+      border-radius: 3px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-bottom: 1.5rem;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.75rem;
+      top: 0.3rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #3498db;
+      border: 3px solid white;
+      box-shadow: 0 0 0 2px #3498db;
+    }
+    
+    .year {
+      font-weight: 700;
+      color: #3498db;
+      margin-bottom: 0.3rem;
+    }
+    
+    .event {
+      color: #555;
+    }
+    
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    
+    .card-item {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .card-number {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #3498db;
+      margin-bottom: 0.3rem;
+    }
+    
+    .card-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    
+    .card-meaning {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    
+    .suits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .suit-item {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .suit-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .suit-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
       text-align: center;
     }
     
+    .suit-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+    
+    .suit-element {
+      font-size: 0.9rem;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .suit-areas {
+      font-size: 0.95rem;
+      color: #555;
+      text-align: center;
+    }
+    
+    .spreads-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .spread-item {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .spread-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .spread-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    
+    .spread-purpose {
+      font-size: 0.95rem;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+    }
+    
+    .spread-description {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .benefit-item {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1.2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .benefit-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .benefit-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .benefit-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      color: #2c3e50;
+    }
+    
+    .benefit-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    
+    .research-quote {
+      background: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1.2rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #555;
+    }
+    
+    .research-quote cite {
+      display: block;
+      margin-top: 0.8rem;
+      font-style: normal;
+      font-weight: 600;
+      color: #34495e;
+    }
+    
+    .spread-progress {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.5rem 0;
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    
+    .spread-level {
+      text-align: center;
+      flex: 1;
+      position: relative;
+    }
+    
+    .spread-level:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 20%;
+      height: 60%;
+      width: 1px;
+      background: #ddd;
+    }
+    
+    .level-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    
+    .level-spreads {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .feature-item {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .feature-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    
+    .feature-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    
+    .app-benefits {
+      margin: 1.5rem 0;
+    }
+    
+    .benefit-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+    }
+    
+    .benefit-check {
+      color: #27ae60;
+      font-size: 1.2rem;
+      margin-right: 0.8rem;
+    }
+    
+    .benefit-text {
+      font-size: 1.05rem;
+      color: #555;
+    }
+    
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .testimonial {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 0.8rem;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      color: #34495e;
+      text-align: right;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+    }
+    
     .cta-section h2 {
+      color: white;
       border-bottom: none;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+    }
+    
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .app-badges {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
     }
     
     .app-badges img {
-      height: 50px;
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+    
+    .app-badges img:hover {
+      transform: scale(1.05);
+    }
+    
+    .cta-features {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .cta-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .cta-icon {
+      font-size: 1.2rem;
+    }
+    
+    .cta-text {
+      font-size: 0.95rem;
+    }
+    
+    @media (max-width: 968px) {
+      .section-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .suits-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .spreads-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+      
+      .spread-progress {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .spread-level:not(:last-child)::after {
+        display: none;
+      }
     }
     
     @media (max-width: 768px) {
@@ -216,12 +1112,17 @@ import PostNavigation from '../../../components/PostNavigation.astro'; // Yol d�
       }
       
       .blog-header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       
       .app-badges {
         flex-direction: column;
         align-items: center;
+      }
+      
+      .cta-features {
+        flex-direction: column;
+        gap: 1rem;
       }
     }
   </style>
