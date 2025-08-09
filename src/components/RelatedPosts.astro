@@ -1,0 +1,76 @@
+---
+// src/components/RelatedPosts.astro
+---
+<div class="related-posts">
+  <h3>You Might Also Like</h3>
+  <div class="related-posts-grid">
+    <article class="related-post">
+      <a href="/blog/how-to-read-tarot">
+        <img src="/images/mockup-card-detail.webp" alt="Tarot reading guide" />
+        <h4>How to Read Tarot Cards: A Step-by-Step Guide</h4>
+      </a>
+    </article>
+    <article class="related-post">
+      <a href="/blog/common-tarot-spreads">
+        <img src="/images/mockup-guide-book.webp" alt="Tarot spreads" />
+        <h4>10 Common Tarot Spreads for Beginners</h4>
+      </a>
+    </article>
+    <article class="related-post">
+      <a href="/blog/tarot-and-meditation">
+        <img src="/images/mockup-interpretation.webp" alt="Tarot meditation" />
+        <h4>Tarot and Meditation: A Powerful Combination</h4>
+      </a>
+    </article>
+  </div>
+</div>
+
+<style is:scoped>
+  .related-posts {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .related-posts h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .related-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .related-post {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+  
+  .related-post:hover {
+    transform: translateY(-3px);
+  }
+  
+  .related-post a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .related-post img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .related-post h4 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+// src/components/LanguageSwitcher.astro
+---
+<div class="language-switcher">
+  <button class="lang-button active">English</button>
+  <a href="/blog/tr/tarot-nedir" class="lang-button">Türkçe</a>
+</div>
+
+<style scoped>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .lang-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    background: white;
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .lang-button:hover, .lang-button.active {
+    background: var(--primary-color);
+    color: white;
+  }
+</style>
